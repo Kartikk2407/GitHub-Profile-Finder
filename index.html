@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Profile Finder</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>GitHub Profile Finder</h1>
+        <p class="subtitle">
+            Search any GitHub user's public profile
+        </p>
+
+        <!-- Search Box -->
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Enter GitHub Username">
+
+            <button id="searchBtn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search
+            </button>
+
+        </div>
+
+        <!-- Loading -->
+        <div class="loading hidden">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+
+        <!-- Error -->
+        <div class="error hidden">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <p>User Not Found!</p>
+        </div>
+
+        <!-- Profile Card -->
+        <div class="profile-card hidden">
+
+            <!-- Top -->
+            <div class="profile-top">
+
+                <img
+                    id="avatar"
+                    src=""
+                    alt="Profile Image">
+
+                <div class="profile-info">
+
+                    <h2 id="name">Name</h2>
+
+                    <p id="login">@username</p>
+
+                    <p id="bio">
+                        User Bio
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Stats -->
+            <div class="stats">
+
+                <div class="stat">
+                    <h3 id="repos">0</h3>
+                    <span>Repositories</span>
+                </div>
+
+                <div class="stat">
+                    <h3 id="followers">0</h3>
+                    <span>Followers</span>
+                </div>
+
+                <div class="stat">
+                    <h3 id="following">0</h3>
+                    <span>Following</span>
+                </div>
+
+            </div>
+
+            <!-- Details -->
+            <div class="details">
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span id="location">Not Available</span>
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-building"></i>
+                    <span id="company">Not Available</span>
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-link"></i>
+
+                    <a
+                        href="#"
+                        id="profileLink"
+                        target="_blank">
+                        View GitHub Profile
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
